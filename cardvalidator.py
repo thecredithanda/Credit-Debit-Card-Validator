@@ -1,8 +1,8 @@
-def check_validity(num):  # this function adds every digit of the card number to a list and,
+def check_validity(num):                                  # this function adds every digit of the card number to a list and,
     validlist = []
     for i in num:
         validlist.append(int(i))
-    for i in range(0, len(num), 2):  # applying Luhn Algorithm to check whether resulting sum is divisible by ten
+    for i in range(0, len(num), 2):                       # applying Luhn Algorithm to check whether resulting sum is divisible by ten
         validlist[i] = validlist[i] * 2
         if validlist[i] >= 10:
             validlist[i] = (validlist[i] // 10 + validlist[i] % 10)
